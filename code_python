@@ -2,7 +2,7 @@
 
 import openai
 import os
-import getpass
+import getpass #call all the openai and etc.
 
 # Set the API key
 if not os.environ.get("OPENAI_API_KEY"):
@@ -11,10 +11,13 @@ if not os.environ.get("OPENAI_API_KEY"):
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # Initialize the system message
+#can change from 'you are a GenZ..' to anything
+
 chat_history = [{"role": "system", "content": "You are a GenZ vibe mentor."}]
 
 print("Chatbot is ready. Type 'bye' to quit.\n")
 
+#when user use, user can either continue the chat or leave by using 'bye' or anything depending on your choice
 while True:
     user_input = input("You: ")
     
